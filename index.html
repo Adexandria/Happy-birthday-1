@@ -14,17 +14,17 @@
 <body>
   <div class="container">
     <div class="one">
-      <h1 class="one">Hey
-        <span id="name">Ashish...</span>
+      <h1 class="one">Welcome
+        <span id="name">Everyone</span>
       </h1>
       <p class="two" id="greetingText">It's very special day for all btw!</p>
     </div>
     <div class="three">
-      <p>It's your birthday!!!</p>
+      <p>It's Adeola's birthday</p>
     </div>
     <div class="four">
       <div class="text-box">
-        <p class="hbd-chatbox">Happy birthday to you!! Yeee! Many many happy returns of your day</p>
+        <p class="hbd-chatbox">Happy birthday to Adeola!! Yeee! Many many happy returns of your day</p>
         <p class="fake-btn">Send</p>
       </div>
     </div>
@@ -42,8 +42,17 @@
         <span>O</span>
       </p>
     </div>
-    <div class="six">
-      <img src="img/ashish.png" alt="" class="lydia-dp" id="imagePath">
+    <div class="six"> 
+      <img src="img/bd1.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
+      <img src="img/bd2.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
+      <img src="img/bd3.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
+      <img src="img/bd4.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
+      <img src="img/bd5.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
+      <img src="img/bd6.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
+      <img src="img/bd7.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
+      <img src="img/bd8.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
+      <img src="img/bd9.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
+      <img src="img/bd10.jpg" width="100" height="200" alt="" class="lydia-dp" id="imagePath">
       <!--  <img src="img/hat.svg" alt="" class="hat">  -->
       <div class="wish">
         <h3 class="wish-hbd">Happy Birthday!</h3>
@@ -87,40 +96,34 @@
         <img src="img/ballon3.svg" alt="">
       </div>
     </div>
-    <div class="eight">
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" />
-      </svg>
-    </div>
-    <div class="nine">
-      <p>Hope you enjoy this:)</p>
-      <p id="replay">Or click, if you want to watch it again.</p>
-      <p class="last-smile">:)</p>
-    </div>
+  <div class="nine">
+   <p>Welcome to Adeola's donation box<p>
+   <label for="banks">Select Bank:</label>
+      <select name="bank-names" id="bank-names">
+        <option value="access_bank">Access(Diamond) Bank</option>
+        <option value="fidelity_bank">Fidelity Bank</option>
+        <option value="first_bank">First Bank</option>
+        <option value="first_city_monument_bank">First City Monument Bank (FCMB)</option>
+        <option value="guaranty_trust_bank">Guaranty Trust Bank (GTB)</option>
+        <option value="polaris_bank">Polaris Bank</option>
+        <option value="sterling_bank">Sterling Bank</option>
+        <option value="united_bank for Africa (UBA)">United Bank for Africa (UBA)</option>
+        <option value="union_bank">Union Bank</option>
+        <option value="wema_bank">Wema Bank</option>
+        <option value="zenith_bank">Zenith Bank</option>
+        <option value="other">Other</option>
+      </select>
+    <br/>
+    <label>Enter amount:</label>
+    <input id="amount" placeholder="Enter amount" type="number" required/>
+    <br/>
+    <button id ="generate" onclick="Generate()">Generate short code</button>
+    <p>
+      Account Details:
+      <span class="output"></span> 
+      <br/>
+      <span class="bank"></span>
+    </p>
   </div>
 </body>
 

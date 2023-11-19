@@ -276,6 +276,56 @@ const animationTimeline = () => {
   });
 };
 
+function Generate(){
+  var bank = document.querySelector('#bank-names').value;
+  var amount = document.getElementById("amount").value;
+  var personalBank="Wema Bank "
+  var accountNumber="7820748265"
+  var Name="Adeola Aderibigbe"
+  var shortCode;
+  switch(bank){
+    case "access_bank" : 
+      shortCode= "*901*2*"+amount+"*"+accountNumber+"#"
+      break;
+    case "fidelity_bank" : 
+      shortCode= "*770*"+accountNumber+"*"+amount+"#"
+      break; 
+    case "first_bank" : 
+      shortCode= "*894*"+amount+"*"+accountNumber+"#"
+      break;
+    case "first_city_monument_bank" : 
+      shortCode= "*389*"+amount+"*"+accountNumber+"#"
+      break;   
+    case "guaranty_trust_bank" : 
+      shortCode= "*737*2*"+amount+"*"+accountNumber+"#"
+      break;
+    case "polaris_bank" : 
+      shortCode= "*833*"+amount+"*"+accountNumber+"#"
+      break;
+    case "sterling_bank" : 
+      shortCode= "*822*5*"+amount+"*"+accountNumber+"#"
+      break;
+    case "united_bank for Africa (UBA)" : 
+      shortCode= "*919*4*"+accountNumber+"*"+amount+"#"
+      break;
+    case "union_bank" : 
+      shortCode= "*826*2*"+amount+"*"+accountNumber+"#"
+      break;
+    case "wema_bank" : 
+      shortCode= "*945*"+accountNumber+"*"+amount+"#"
+      break;
+    case "zenith_bank" : 
+      shortCode= "*966*"+amount+"*"+accountNumber+"#"
+      break;
+    default:
+      shortCode="AccountNumber:"+accountNumber
+  }
+
+  document.querySelector('.output').textContent=shortCode;
+
+  document.querySelector('.bank').textContent=Name+" "+personalBank;
+}
+
 // Import the data to customize and insert them into page
 const fetchData = () => {
   fetch("customize.json")
@@ -294,6 +344,22 @@ const fetchData = () => {
       });
     });
 };
+
+async function copyContent() {
+  try {
+    var text = document.querySelector('.output').textContent;
+    navigator.permissions.query({ name: "write-on-clipboard" }).then((result) => {
+      if (result.state == "granted" || result.state == "prompt") {
+         navigator.clipboard.writeText(text);
+         console.log('Content copied to clipboard');
+      }
+    });
+    
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+};
+
 
 // Run fetch and animation in sequence
 const resolveFetch = () => {
